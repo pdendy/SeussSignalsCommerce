@@ -5,5 +5,4 @@ export interface Plan {
     DeviceCount: number;
     DeviceLimit: number;
     Price: number;
-    
 }

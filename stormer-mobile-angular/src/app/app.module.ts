@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -62,7 +62,12 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
   },
     MsalGuard
   ],
-  bootstrap: [AppComponent, MsalRedirectComponent]
+  bootstrap: [
+    AppComponent, 
+    MsalRedirectComponent], 
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 
 export class AppModule { }
